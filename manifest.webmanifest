@@ -1,0 +1,25 @@
+{
+  "id": "/",
+  "name": "FixNow",
+  "short_name": "FixNow",
+  "description": "Find and install FixNow for trusted home services.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "theme_color": "#1B4EF5",
+  "background_color": "#FFFFFF",
+  "icons": [
+    {
+      "src": "/assets/fixnow-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/fixnow-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

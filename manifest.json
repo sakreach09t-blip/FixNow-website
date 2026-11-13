@@ -1,0 +1,21 @@
+
+{
+  "id": "/",
+  "name": "FixNow - Home Services",
+  "short_name": "FixNow",
+  "description": "Book trusted home repair professionals.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#FFFFFF",
+  "theme_color": "#1B4EF5",
+  "icons": [
+    {
+      "src": "./assets/fixnow.png",
+      "sizes": "1098x1098",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

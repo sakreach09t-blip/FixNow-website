@@ -4,375 +4,379 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fixnow-fast-fix-trust</title>
+    <meta name="theme-color" content="#1B4EF5">
+    <meta name="description"
+        content="Find skilled home-service technicians, compare services, and get your home fixed without the hassle.">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="FixNow">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="manifest" href="./manifest.webmanifest">
+    <link rel="apple-touch-icon" href="./assets/fixnow-192.png">
+    <title>FixNow | Trusted Home Services</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
         rel="stylesheet">
-    <meta name="google-site-verification" content="JII39WL5GHTbPlmMChSnte9L_GM5q1MEYHgDZUk45CU" />
     <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,400,0,0&display=block" />
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,400,0,0&display=block">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
-    <div class="snow-container">
-        <div class="snowflake">❄</div>
-        <div class="snowflake">❅</div>
-        <div class="snowflake">❆</div>
-        <div class="snowflake">❄</div>
-        <div class="snowflake">❅</div>
-        <div class="snowflake">❆</div>
-        <div class="snowflake">❄</div>
-        <div class="snowflake">❅</div>
-        <div class="snowflake">❆</div>
-        <div class="snowflake">❄</div>
-    </div>
-    <header>
-        <div class="icon-block">
-            <img src="./assets/fixnow.png" alt="fixnow" style="object-fit: contain;clip-path: circle(50%);"
-                class="logo">
-            <h2>Fix<span class="hight-light">Now</span></h2>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="#home" aria-label="FixNow home">
+                <img src="./assets/fixnow.png" alt="" class="brand-logo">
+                <span>Fix<span class="brand-accent">Now</span></span>
+            </a>
+
+            <nav class="desktop-nav" aria-label="Main navigation">
+                <a class="nav-link" href="#home" aria-current="page">Home</a>
+                <a class="nav-link" href="#technicians">Find Technicians</a>
+                <a class="nav-link" href="#services">Services</a>
+                <a class="nav-link" href="#about">About</a>
+                <a class="button button-primary nav-join" href="#join-us">Join Us</a>
+                <button id="installApp" class="install-button" type="button" hidden>
+                    <span class="material-symbols-outlined" aria-hidden="true">install_mobile</span>
+                    Install FixNow
+                </button>
+            </nav>
+
+            <button class="nav-toggle" type="button" aria-controls="mobile-navigation" aria-expanded="false"
+                aria-label="Open navigation">
+                <span class="material-symbols-outlined" aria-hidden="true">menu</span>
+            </button>
         </div>
-        <nav class="nav-block" aria-label="Main navigation">
-            <ul class="nav">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Find</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#" class="register">Join Us</a></li>
-            </ul>
-        </nav>
-        <button class="nav-toggle" type="button" aria-controls="mobile-navigation" aria-expanded="false"
-            aria-label="Open navigation">
-            <span class="material-symbols-outlined" aria-hidden="true">menu</span>
-        </button>
         <nav class="mobile-nav-panel" id="mobile-navigation" aria-label="Mobile navigation" hidden>
-            <ul class="mobile-nav">
-                <li>
-                    <button class="nav-close" type="button" aria-label="Close navigation">
-                        <span class="material-symbols-outlined" aria-hidden="true">close</span>
-                    </button>
-                </li>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Find</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#" class="register">Join Us</a></li>
-            </ul>
+            <div class="mobile-nav-top">
+                <span class="mobile-nav-title">Menu</span>
+                <button class="nav-close" type="button" aria-label="Close navigation">
+                    <span class="material-symbols-outlined" aria-hidden="true">close</span>
+                </button>
+            </div>
+            <a class="nav-link" href="#home">Home</a>
+            <a class="nav-link" href="#technicians">Find Technicians</a>
+            <a class="nav-link" href="#services">Services</a>
+            <a class="nav-link" href="#about">About</a>
+            <a class="button button-primary" href="#join-us">Join Us</a>
+            <button id="installAppMobile" class="install-button" type="button" hidden>
+                <span class="material-symbols-outlined" aria-hidden="true">install_mobile</span>
+                Install FixNow
+            </button>
+            <p class="install-guidance" id="mobile-install-feedback" role="status" aria-live="polite" hidden></p>
         </nav>
     </header>
 
-    <main class="hero" id="home">
-        <div class="hero-content">
-            <div class="badge design_services">
-                <span class="material-symbols-outlined star">
-                    award_star
-                </span>
-                <p>Your problem will solve here</p>
+    <main>
+        <section class="hero section-shell" id="home" aria-labelledby="hero-title">
+            <div class="hero-copy">
+                <div class="eyebrow hero-eyebrow">
+                    <span class="material-symbols-outlined" aria-hidden="true">verified_user</span>
+                    Trusted Home Repair Platform
+                </div>
+                <h1 id="hero-title">Your Home Problems, Solved by <span>Trusted Professionals.</span></h1>
+                <p class="hero-description">Find skilled technicians, compare services, and get your home fixed
+                    without the hassle.</p>
+                <div class="hero-actions">
+                    <a class="button button-primary button-large" href="#technicians">
+                        Find a Technician
+                        <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
+                    </a>
+                    <a class="button button-secondary button-large" href="#services">
+                        <span class="material-symbols-outlined" aria-hidden="true">grid_view</span>
+                        Explore Services
+                    </a>
+                </div>
+                <div class="hero-note">
+                    <span class="material-symbols-outlined" aria-hidden="true">check_circle</span>
+                    A simpler way to find the help your home needs
+                </div>
             </div>
-            <h1>Solve Your Problem With Fix<span class="hight-light">Now</span>
-                Fix, Fast, Trusted.Find Your Technicians Every Times You Need</h1>
-            <p>Find the service that you need.</p>
-        </div>
-        <div class="call-to-action">
-            <button class="btn active">
-                <span class="material-symbols-outlined rocket">
-                    rocket_launch
-                </span>
-                Start Now
-            </button>
-            <button class="btn">
-                <span class="material-symbols-outlined explore">
-                    explore
-                </span>
-                Explore More
-            </button>
-        </div>
-        <div class="image-illustrate">
-            <img src="./assets/technicains-illustrations.png" alt="technicians-illustrate">
-        </div>
+            <div class="hero-art">
+                <div class="hero-art-wash" aria-hidden="true"></div>
+                <img src="./assets/technicains-illustrations.png" alt="Home-service technicians ready to help">
+                <div class="hero-caption">
+                    <span class="material-symbols-outlined" aria-hidden="true">home_repair_service</span>
+                    <span><strong>Home care, made simple</strong><small>Find the right help for the job</small></span>
+                </div>
+            </div>
+        </section>
+
+        <section class="services-section section-shell" id="services" aria-labelledby="services-title">
+            <div class="search-panel">
+                <form class="search-bar" id="service-search-form" role="search">
+                    <span class="material-symbols-outlined search-icon" aria-hidden="true">search</span>
+                    <label class="sr-only" for="service-search">Search services or technicians</label>
+                    <input id="service-search" name="service" type="search"
+                        placeholder="What can we help you fix?" autocomplete="off">
+                    <button class="button button-primary search-submit" type="submit">Search</button>
+                </form>
+                <p class="search-feedback" id="search-feedback" role="status" aria-live="polite"></p>
+            </div>
+
+            <div class="section-heading">
+                <span class="eyebrow">Services for every home</span>
+                <h2 id="services-title">Find the right help for the job</h2>
+                <p>Explore our most requested home services and connect with a technician.</p>
+            </div>
+            <div class="category-grid">
+                <article class="category-card">
+                    <span class="material-symbols-outlined category-icon" aria-hidden="true">ac_unit</span>
+                    <h3>Air Conditioning</h3>
+                    <p>Keep your home comfortable with AC maintenance and repairs.</p>
+                    <button class="text-link" type="button" data-service="Air Conditioning">
+                        Find Technicians <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
+                    </button>
+                </article>
+                <article class="category-card">
+                    <span class="material-symbols-outlined category-icon" aria-hidden="true">handyman</span>
+                    <h3>General Handyman</h3>
+                    <p>Get help with household fixes, assembly, and installations.</p>
+                    <button class="text-link" type="button" data-service="General Handyman">
+                        Find Technicians <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
+                    </button>
+                </article>
+                <article class="category-card">
+                    <span class="material-symbols-outlined category-icon" aria-hidden="true">electric_bolt</span>
+                    <h3>Electrical</h3>
+                    <p>Find help with wiring, lighting, and electrical repairs.</p>
+                    <button class="text-link" type="button" data-service="Electrical">
+                        Find Technicians <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
+                    </button>
+                </article>
+                <article class="category-card">
+                    <span class="material-symbols-outlined category-icon" aria-hidden="true">chair</span>
+                    <h3>Carpentry &amp; Furniture</h3>
+                    <p>Repair, install, or assemble furniture and woodwork.</p>
+                    <button class="text-link" type="button" data-service="Carpentry">
+                        Find Technicians <span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span>
+                    </button>
+                </article>
+            </div>
+        </section>
+
+        <section class="technicians-section" id="technicians" aria-labelledby="technicians-title">
+            <div class="section-shell">
+                <div class="section-heading">
+                    <span class="eyebrow">Meet the professionals</span>
+                    <h2 id="technicians-title">Technicians available</h2>
+                    <p>Explore technician profiles, skills, services, and starting prices.</p>
+                </div>
+                <p class="booking-feedback" id="booking-feedback" role="status" aria-live="polite"></p>
+                <div class="technician-grid" id="technician-list">
+                    <article class="technician-card"
+                        data-search="sok dara electrician electrical wiring installation troubleshooting lights socket circuit">
+                        <div class="technician-photo">
+                            <img src="./assets/fixnow-maskot.png" alt="Sok Dara">
+                            <span class="availability available"><span></span>Available</span>
+                        </div>
+                        <div class="technician-info">
+                            <div class="technician-name">
+                                <h3>Sok Dara</h3>
+                                <span class="skill-tag">Electrician</span>
+                            </div>
+                            <div class="profile-detail"><strong>Skills</strong><p>Electrical installation, wiring, troubleshooting</p></div>
+                            <div class="profile-detail"><strong>Services provided</strong><p>Light installation, socket repair, circuit repair</p></div>
+                            <div class="technician-footer">
+                                <div class="price"><span>Starting from</span><strong>$10 <small>/ service</small></strong></div>
+                                <button class="button button-primary book-button" type="button" data-book="Sok Dara">Book Now</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="technician-card"
+                        data-search="vannak chea plumber plumbing pipes water systems leak detection faucet drain">
+                        <div class="technician-photo">
+                            <img src="./assets/fixnow-maskot.png" alt="Vannak Chea">
+                            <span class="availability available"><span></span>Available</span>
+                        </div>
+                        <div class="technician-info">
+                            <div class="technician-name">
+                                <h3>Vannak Chea</h3>
+                                <span class="skill-tag">Plumber</span>
+                            </div>
+                            <div class="profile-detail"><strong>Skills</strong><p>Pipe installation, water systems, leak detection</p></div>
+                            <div class="profile-detail"><strong>Services provided</strong><p>Pipe repair, faucet installation, drain cleaning</p></div>
+                            <div class="technician-footer">
+                                <div class="price"><span>Starting from</span><strong>$12 <small>/ service</small></strong></div>
+                                <button class="button button-primary book-button" type="button" data-book="Vannak Chea">Book Now</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="technician-card"
+                        data-search="pisey sok ac technician air conditioning cooling maintenance installation cleaning gas repair">
+                        <div class="technician-photo">
+                            <img src="./assets/fixnow-maskot.png" alt="Pisey Sok">
+                            <span class="availability busy"><span></span>Busy</span>
+                        </div>
+                        <div class="technician-info">
+                            <div class="technician-name">
+                                <h3>Pisey Sok</h3>
+                                <span class="skill-tag">AC Technician</span>
+                            </div>
+                            <div class="profile-detail"><strong>Skills</strong><p>AC maintenance, installation, cooling systems</p></div>
+                            <div class="profile-detail"><strong>Services provided</strong><p>AC cleaning, gas checking, AC repair</p></div>
+                            <div class="technician-footer">
+                                <div class="price"><span>Starting from</span><strong>$15 <small>/ service</small></strong></div>
+                                <button class="button button-disabled book-button" type="button" disabled>Currently Busy</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="technician-card"
+                        data-search="rithy chan carpenter carpentry furniture woodwork assembly door cabinet repair installation">
+                        <div class="technician-photo">
+                            <img src="./assets/fixnow-maskot.png" alt="Rithy Chan">
+                            <span class="availability available"><span></span>Available</span>
+                        </div>
+                        <div class="technician-info">
+                            <div class="technician-name">
+                                <h3>Rithy Chan</h3>
+                                <span class="skill-tag">Carpenter</span>
+                            </div>
+                            <div class="profile-detail"><strong>Skills</strong><p>Furniture assembly, woodwork, door installation</p></div>
+                            <div class="profile-detail"><strong>Services provided</strong><p>Furniture repair, cabinet and door installation</p></div>
+                            <div class="technician-footer">
+                                <div class="price"><span>Starting from</span><strong>$18 <small>/ service</small></strong></div>
+                                <button class="button button-primary book-button" type="button" data-book="Rithy Chan">Book Now</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="technician-card"
+                        data-search="mengly kim general handyman maintenance painting household repairs furniture fixing home">
+                        <div class="technician-photo">
+                            <img src="./assets/fixnow-maskot.png" alt="Mengly Kim">
+                            <span class="availability available"><span></span>Available</span>
+                        </div>
+                        <div class="technician-info">
+                            <div class="technician-name">
+                                <h3>Mengly Kim</h3>
+                                <span class="skill-tag">General Handyman</span>
+                            </div>
+                            <div class="profile-detail"><strong>Skills</strong><p>General maintenance, painting, household repairs</p></div>
+                            <div class="profile-detail"><strong>Services provided</strong><p>Wall painting, furniture fixing, home repairs</p></div>
+                            <div class="technician-footer">
+                                <div class="price"><span>Starting from</span><strong>$10 <small>/ service</small></strong></div>
+                                <button class="button button-primary book-button" type="button" data-book="Mengly Kim">Book Now</button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <p class="no-results" id="no-technicians" hidden>No technicians match that search. Try another service or skill.</p>
+            </div>
+        </section>
+
+        <section class="benefits-section section-shell" id="about" aria-labelledby="benefits-title">
+            <div class="section-heading">
+                <span class="eyebrow">Why FixNow</span>
+                <h2 id="benefits-title">Home repairs, without the hassle</h2>
+                <p>A straightforward way for customers and technicians to connect.</p>
+            </div>
+            <div class="benefits-grid">
+                <article class="benefit-card">
+                    <span class="material-symbols-outlined benefit-icon" aria-hidden="true">person_search</span>
+                    <h3>Easy technician discovery</h3>
+                    <p>Browse technician profiles and find skills that fit your home repair needs.</p>
+                </article>
+                <article class="benefit-card">
+                    <span class="material-symbols-outlined benefit-icon" aria-hidden="true">price_check</span>
+                    <h3>Transparent starting prices</h3>
+                    <p>Review the listed starting price before you reach out about a service.</p>
+                </article>
+                <article class="benefit-card">
+                    <span class="material-symbols-outlined benefit-icon" aria-hidden="true">calendar_month</span>
+                    <h3>Convenient booking</h3>
+                    <p>Find available technicians and make it easier to plan your next repair.</p>
+                </article>
+                <article class="benefit-card">
+                    <span class="material-symbols-outlined benefit-icon" aria-hidden="true">work</span>
+                    <h3>Job opportunities</h3>
+                    <p>Technicians can connect with customers looking for home-service skills.</p>
+                </article>
+                <article class="benefit-card">
+                    <span class="material-symbols-outlined benefit-icon" aria-hidden="true">app_registration</span>
+                    <h3>For customers and technicians</h3>
+                    <p>FixNow is designed to bring both sides of the home-service marketplace together.</p>
+                </article>
+                <article class="benefit-card">
+                    <span class="material-symbols-outlined benefit-icon" aria-hidden="true">home_repair_service</span>
+                    <h3>Home repair services</h3>
+                    <p>Explore practical services for the jobs that keep your home running smoothly.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="join-section section-shell" id="join-us" aria-labelledby="join-title">
+            <div class="join-heading">
+                <span class="eyebrow">Join the FixNow community</span>
+                <h2 id="join-title">Better home care starts here.</h2>
+                <p>Whether you need a hand at home or have skills to share, there’s a place for you on FixNow.</p>
+            </div>
+            <div class="join-grid">
+                <article class="join-card join-customer">
+                    <span class="material-symbols-outlined join-icon" aria-hidden="true">home</span>
+                    <h3>For customers</h3>
+                    <p>Find reliable technicians and solve your household problems.</p>
+                    <button class="button button-primary" type="button" data-signup="Customer">Join as Customer</button>
+                </article>
+                <article class="join-card join-technician">
+                    <span class="material-symbols-outlined join-icon" aria-hidden="true">engineering</span>
+                    <h3>For technicians</h3>
+                    <p>Connect with customers, find job opportunities, and grow your business.</p>
+                    <button class="button button-outline" type="button" data-signup="Technician">Join as Technician</button>
+                </article>
+            </div>
+            <p class="join-feedback" id="join-feedback" role="status" aria-live="polite"></p>
+        </section>
     </main>
 
-    <section class="arti-card" id="services">
-        <div class="search-bar">
-            <span class="material-symbols-outlined search">search</span>
-            <input type="text" placeholder="find your serices">
-            <button class="btn-fill">Search</button>
-        </div>
-        <div class="category">
-            <h4 class="section-tag">Choose one service</h4>
-            <h2 class="colored">Find one of your problem in these categories</h2>
-            <div class="card card-cate">
-                <span class="material-symbols-outlined feature">
-                    ac_unit
-                </span>
-                <div class="card-des">
-                    <h4 class="title">Aircondition</h4>
-                    <p class="small">Keep your home cool</p>
-                    <button class="btn-fill">Find Technicians</button>
-                </div>
-            </div>
-
-            <div class="card card-cate">
-                <span class="material-symbols-outlined feature">
-                    handyman
-                </span>
-                <div class="card-des">
-                    <h4 class="title">General Handy Man</h4>
-                    <p class="small">Fix, assemble, install</p>
-                    <button class="btn-fill">Find Technicians</button>
-                </div>
-            </div>
-
-            <div class="card card-cate">
-                <span class="material-symbols-outlined feature">
-                    electric_bolt
-                </span>
-                <div class="card-des">
-                    <div class="point"></div>
-                    <h4 class="title">Electrical</h4>
-                    <p class="small">Safe & professional</p>
-                    <button class="btn-fill">Find Technicians</button>
-                </div>
-            </div>
-
-            <div class="card card-cate">
-                <span class="material-symbols-outlined feature">
-                    chair
-                </span>
-                <div class="card-des">
-                    <h4 class="title">Campantary & Funiture</h4>
-                    <p class="small">Build, repair, restore</p>
-                    <button class="btn-fill">Find Technicians</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="technicians-section" id="technicians">
-        <div class="section-header">
-            <h4 class="section-tag">OUR PROFESSIONALS</h4>
-            <h2>Technicians Available</h2>
-            <p>Find skilled and trusted technicians for your home repair needs.</p>
-        </div>
-
-        <div class="technician-container">
-
-            <div class="technician-card">
-                <div class="technician-image">
-                    <img src="./assets/fixnow-maskot.png" alt="Sok Dara">
-                    <span class="status available">Available</span>
-                </div>
-                <div class="technician-info">
-                    <h3>Sok Dara</h3>
-                    <span class="skill">Electrician</span>
-
-                    <div class="info-item">
-                        <strong>Skills</strong>
-                        <p>Electrical installation, wiring, troubleshooting</p>
-                    </div>
-
-                    <div class="info-item">
-                        <strong>Services Provided</strong>
-                        <p>Light installation, socket repair, circuit repair</p>
-                    </div>
-
-                    <div class="card-footer">
-                        <div class="price">
-                            <span>Starting from</span>
-                            <h3>$10 <small>/ service</small></h3>
-                        </div>
-                        <button class="book-btn btn">Book Now</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="technician-card">
-                <div class="technician-image">
-                    <img src="./assets/fixnow-maskot.png" alt="Vannak Chea">
-                    <span class="status available">Available</span>
-                </div>
-                <div class="technician-info">
-                    <h3>Vannak Chea</h3>
-                    <span class="skill">Plumber</span>
-
-                    <div class="info-item">
-                        <strong>Skills</strong>
-                        <p>Pipe installation, water systems, leak detection</p>
-                    </div>
-
-                    <div class="info-item">
-                        <strong>Services Provided</strong>
-                        <p>Pipe repair, faucet installation, drain cleaning</p>
-                    </div>
-
-                    <div class="card-footer">
-                        <div class="price">
-                            <span>Starting from</span>
-                            <h3>$12 <small>/ service</small></h3>
-                        </div>
-                        <button class="book-btn btn">Book Now</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="technician-card">
-                <div class="technician-image">
-                    <img src="./assets/fixnow-maskot.png" alt="Pisey Sok">
-                    <span class="status busy">Busy</span>
-                </div>
-                <div class="technician-info">
-                    <h3>Pisey Sok</h3>
-                    <span class="skill">AC Technician</span>
-
-                    <div class="info-item">
-                        <strong>Skills</strong>
-                        <p>AC maintenance, installation, cooling systems</p>
-                    </div>
-
-                    <div class="info-item">
-                        <strong>Services Provided</strong>
-                        <p>AC cleaning, gas checking, AC repair</p>
-                    </div>
-
-                    <div class="card-footer">
-                        <div class="price">
-                            <span>Starting from</span>
-                            <h3>$15 <small>/ service</small></h3>
-                        </div>
-                        <button class="book-btn" disabled>Currently Busy</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="technician-card">
-                <div class="technician-image">
-                    <img src="./assets/fixnow-maskot.png" alt="Rithy Chan">
-                    <span class="status available">Available</span>
-                </div>
-                <div class="technician-info">
-                    <h3>Rithy Chan</h3>
-                    <span class="skill">Carpenter</span>
-
-                    <div class="info-item">
-                        <strong>Skills</strong>
-                        <p>Furniture assembly, woodwork, door installation</p>
-                    </div>
-
-                    <div class="info-item">
-                        <strong>Services Provided</strong>
-                        <p>Furniture repair, cabinet and door installation</p>
-                    </div>
-
-                    <div class="card-footer">
-                        <div class="price">
-                            <span>Starting from</span>
-                            <h3>$18 <small>/ service</small></h3>
-                        </div>
-                        <button class="book-btn btn">Book Now</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="technician-card">
-                <div class="technician-image">
-                    <img src="./assets/fixnow-maskot.png" alt="Mengly Kim">
-                    <span class="status available">Available</span>
-                </div>
-                <div class="technician-info">
-                    <h3>Mengly Kim</h3>
-                    <span class="skill">General Handyman</span>
-
-                    <div class="info-item">
-                        <strong>Skills</strong>
-                        <p>General maintenance, painting, household repairs</p>
-                    </div>
-
-                    <div class="info-item">
-                        <strong>Services Provided</strong>
-                        <p>Wall painting, furniture fixing, home repairs</p>
-                    </div>
-
-                    <div class="card-footer">
-                        <div class="price">
-                            <span>Starting from</span>
-                            <h3>$10 <small>/ service</small></h3>
-                        </div>
-                        <button class="book-btn btn">Book Now</button>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <article class="benefits" id="why-fixnow">
-        <h4 class="section-tag">Why fixNow?</h4>
-        <h2 class="colored">WITH FIXNOW WE WILL SOLVE YOUR HOUSE PROBLEMS</h2>
-        <p class="small">Spend less time find the Technicians with clear price,No waiting</p>
-        <div class="describe">
-            <div class="card  card-des">
-                <div class="title-card">
-                    <span class="material-symbols-outlined feature">
-                        work
-                    </span>
-                    <h4 class="title">Job Opportunities</h4>
-                </div>
-                <p class="small">Find the steady job for better life. Earn money through clicking and accepting booking.
-                </p>
-            </div>
-
-            <div class="card  card-des">
-                <div class="title-card">
-                    <span class="material-symbols-outlined feature">
-                        app_registration
-                    </span>
-                    <h4 class="title">Register</h4>
-                </div>
-                <p class="small">You can become our member as a Customer or Technicians. We provide services for
-                    Customer and benefits Technicians</p>
-            </div>
-
-            <div class="card  card-des">
-                <div class="title-card">
-                    <span class="material-symbols-outlined feature">
-                        home_repair_service
-                    </span>
-                    <h4 class="title">Home repair services</h4>
-                </div>
-                <p class="small">With FixNow with 3 click eliminate your house issue. Using FixNow to income and solve
-                    your house problems.</p>
-            </div>
-        </div>
-    </article>
-
-    <footer>
-        <div class="footer-main">
+    <footer class="site-footer" id="footer">
+        <div class="footer-main section-shell">
             <div class="footer-brand">
-                <a class="footer-logo" href="#home" aria-label="FixNow home">
-                    <img src="./assets/fixnow.png" alt="" class="logo">
-                    <h2>FixNow</h2>
+                <a class="brand footer-logo" href="#home" aria-label="FixNow home">
+                    <img src="./assets/fixnow.png" alt="" class="brand-logo">
+                    <span>Fix<span class="brand-accent">Now</span></span>
                 </a>
-                <p>Reliable home repair services, whenever you need them.</p>
+                <p>Find skilled home-service professionals and make home repairs simpler.</p>
+                <div class="footer-social" aria-label="Social media">
+                    <span class="material-symbols-outlined" role="img" aria-label="Social updates">forum</span>
+                    <span class="material-symbols-outlined" role="img" aria-label="Email">mail</span>
+                    <span class="material-symbols-outlined" role="img" aria-label="Community">groups</span>
+                </div>
             </div>
-
-            <nav class="footer-links" aria-label="Footer navigation">
+            <nav class="footer-links" aria-label="Explore">
                 <h2>Explore</h2>
                 <a href="#home">Home</a>
-                <a href="#services">Services</a>
-                <a href="#why-fixnow">Why FixNow</a>
+                <a href="#technicians">Find Technicians</a>
+                <a href="#about">About FixNow</a>
             </nav>
-
+            <nav class="footer-links" aria-label="Services">
+                <h2>Services</h2>
+                <a href="#services">Air Conditioning</a>
+                <a href="#services">General Handyman</a>
+                <a href="#services">Electrical</a>
+                <a href="#services">Carpentry &amp; Furniture</a>
+            </nav>
             <div class="footer-join">
-                <h2>Work with us</h2>
-                <p>Join FixNow and connect with customers who need your skills.</p>
-                <a class="footer-button" href="./page/register.html">Join FixNow</a>
+                <h2>Join FixNow</h2>
+                <p>Find a technician or bring your skills to the community.</p>
+                <a class="footer-join-link" href="#join-us">Explore ways to join <span class="material-symbols-outlined"
+                        aria-hidden="true">arrow_forward</span></a>
+                <button id="installAppFooter" class="install-button footer-download-button" type="button">
+                    <span class="material-symbols-outlined" aria-hidden="true">install_mobile</span>
+                    Install FixNow
+                </button>
+                <p class="footer-download-feedback" id="footer-download-feedback" role="status" aria-live="polite"
+                    hidden></p>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 FixNow. All rights reserved.</p>
+        <div class="footer-bottom section-shell">
+            <span>&copy; 2026 FixNow. All rights reserved.</span>
+            <a href="#home">Back to top <span class="material-symbols-outlined" aria-hidden="true">arrow_upward</span></a>
         </div>
     </footer>
 
